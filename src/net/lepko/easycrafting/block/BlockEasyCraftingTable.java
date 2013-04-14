@@ -100,7 +100,8 @@ public class BlockEasyCraftingTable extends BlockContainer {
                         var14.motionZ = (double) ((float) rand.nextGaussian() * var15);
 
                         if (var9.hasTagCompound()) {
-                            var14.func_92014_d().setTagCompound((NBTTagCompound) var9.getTagCompound().copy());
+                        	//Previously was called via func_92014_d, hopefully not incorrect?
+                            var14.getEntityItem().setTagCompound((NBTTagCompound) var9.getTagCompound().copy());
                         }
                     }
                 }
