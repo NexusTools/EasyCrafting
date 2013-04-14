@@ -39,9 +39,9 @@ public class EasyRecipe {
         }
         Object o = ingredients.get(index);
         if (o instanceof EasyItemStack) {
-            return (EasyItemStack) o;
+            return o;
         } else if (o instanceof ArrayList) {
-            return (ArrayList<ItemStack>) o;
+            return o;
         } else if (o instanceof ItemStack) {
             EasyItemStack eis = EasyItemStack.fromItemStack((ItemStack) o);
             ingredients.set(index, eis);
@@ -92,7 +92,7 @@ public class EasyRecipe {
                     // TODO: hmm...
                     eis = EasyItemStack.fromItemStack(((ItemStack) ((ArrayList) o).get(0)));
                 } else {
-                    EasyLog.warning("Somthing went wrong @ getCompactIngredientList(); class = " + o.getClass().getName());
+                    EasyLog.warning("Something went wrong @ getCompactIngredientList(); class = " + o.getClass().getName());
                     return new ArrayList<ItemStack>();
                 }
 

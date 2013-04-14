@@ -64,6 +64,8 @@ public class EasyItemStack {
     }
 
     public static EasyItemStack fromItemStack(ItemStack is) {
+    	if(is == null)
+    		return null;
         int charge = 0;
         if (ModCompat.isLoaded("IC2") && is.getItem() instanceof IElectricItem) {
             charge = ElectricItem.discharge(is, 0x7fffffff, 0x7fffffff, true, true);
