@@ -4,4 +4,4 @@ Easy Crafting is a Minecraft mod that provides similar functionality to the now 
 
 We forked this mod in order for it to properly work with our current modded Minecraft server, these issues are fixed in later commits by the original author, but crashes the 1.4.7 server.
 
-[homepage](http://lepko.net/minecraft/)
+[Author's Homepage](http://lepko.net/minecraft/)
