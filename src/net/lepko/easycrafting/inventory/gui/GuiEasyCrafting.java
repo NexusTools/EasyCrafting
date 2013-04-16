@@ -447,9 +447,12 @@ public class GuiEasyCrafting extends GuiContainer {
             GL11.glEnable(GL12.GL_RESCALE_NORMAL);
 
             for (ItemStack is : ingredientList) {
-                itemRenderer.renderItemAndEffectIntoGUI(this.fontRenderer, this.mc.renderEngine, is, xPos, yPos);
-                itemRenderer.renderItemOverlayIntoGUI(this.fontRenderer, this.mc.renderEngine, is, xPos, yPos);
-
+            	try {
+	                itemRenderer.renderItemAndEffectIntoGUI(this.fontRenderer, this.mc.renderEngine, is, xPos, yPos);
+	                itemRenderer.renderItemOverlayIntoGUI(this.fontRenderer, this.mc.renderEngine, is, xPos, yPos);
+            	} catch(Exception e) {
+            		e.printStackTrace();
+            	}
                 yPos += 18;
             }
 
